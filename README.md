@@ -14,4 +14,7 @@ Then you can add it as a property to your classes like this:
     UPROPERTY( EditInstanceOnly )
     FComponentPicker m_oComponentPicker;
     
-It supports the following meta tags (which function the same as they do on FComponentReference): AllowAnyActor, AllowedClasses, and DisallowedClasses
+It supports the following meta tags (which function the same as they do on FComponentReference): AllowAnyActor, AllowedClasses, and DisallowedClasses. For example:
+
+    UPROPERTY( EditInstanceOnly, meta = ( AllowAnyActor, AllowedClasses = "PrimitiveComponent", DisallowedClasses = "SkeletalMeshComponent,BrushComponent"" ) )
+    FComponentPicker m_oComponentPicker;
